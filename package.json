@@ -1,0 +1,16 @@
+{
+  "name": "portable-bundle-node",
+  "version": "0.0.1",
+  "description": "portable.js node.js app bundler",
+  "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/streamich/portable-bundle-node.git"
+  },
+  "license": "Unlicense",
+  "dependencies": {
+    "memfs":        "*",
+    "unionfs":      "*"
+  },
+  "devDependencies": {}
+}
