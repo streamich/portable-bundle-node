@@ -12,5 +12,7 @@
     "memfs":        "*",
     "unionfs":      "*"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "uglify-js":    "*"
+  }
 }

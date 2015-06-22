@@ -32,8 +32,8 @@ function bundle_node(bundle, props) {
     lines.push('');
     lines.push('var mem = new memfs.Volume;');
 
-    b.conf.volumes.forEach(function(volume) {
-        var layer = b.layers.getLayer(volume[1]);
+    bundle.conf.volumes.forEach(function(volume) {
+        var layer = bundle.layers.getLayer(volume[1]);
         layer.build();
         var vol_json = JSON.stringify(layer.toJson(), null, 2);
         var mp = volume[0];
@@ -51,7 +51,7 @@ function bundle_node(bundle, props) {
     lines.push('    .replace(fs);');
     lines.push('');
 
-    lines.push('require("' + b.conf.props.main + '");');
+    lines.push('require("' + bundle.conf.props.main + '");');
 
     var out = lines.join('\n');
     if(props.compress || (typeof props.compress == 'undefined')) out = compress(out);
